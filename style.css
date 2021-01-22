@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); /* Poppins Font */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap'); /* Ubuntu Font */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    --primary: "Poppins";
+    --secondary: "Ubuntu Mono";
+}
+
+body {
+    background: #333533;
+}
+
+/* Header Margin */
+
+.Header-Margin {
+    padding-top: 60px;
+}
+
+/* Header */
+
+.Header {
+    background: #242423;
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.Header-Container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 85%;
+    margin: auto;
+}
+
+.Header-Title {
+    font-family: var(--primary);
+    color: #FFFFFF;
+    font-size: 25px;
+}
+
+.Search-Query {
+    padding: 5px 10px;
+    font-family: var(--primary);
+    margin-left: 25px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+/* Showcase */
+
+.Showcase {
+    background: #F5CB5C;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.Showcase-Bar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Showcase-Details {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.Showcase-Details p:nth-child(2) {
+    margin-left: 15px;
+}
+
+.Arrow {
+    height: 25px;
+    transform: rotate(90deg);
+    background: #FFFFFF;
+    border-radius: 50%;
+    margin-left: 15px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.Arrow:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.Turn {
+    transform: rotate(-450deg);
+}
+
+.Showcase-Detail {
+    font-family: var(--primary);
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.Showcase-Detail span {
+    font-weight: 400;
+}
+
+.Add-Snippet-Form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.Hide {
+    display: none;
+}
+
+.Show {
+    display: flex;
+}
+
+.Snippet-Title {
+    margin-top: 15px;
+    padding: 10px;
+    font-family: var(--primary);
+    font-size: 16px;
+}
+
+.Snippet-Description {
+    margin-top: 15px;
+    resize: none;
+    padding: 10px;
+    font-family: var(--primary);
+    font-size: 16px;
+    height: 100px;
+}
+
+.Snippet-Code {
+    margin-top: 15px;
+    resize: none;
+    padding: 10px;
+    font-family: var(--secondary);
+    font-size: 18px;
+    height: 300px;
+}
+
+.Showcase-Add-Snippet-Button {
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    font-size: 17px;
+    font-family: var(--primary);
+    cursor: pointer;
+    transition: all 0.5s;
+    width: 200px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+    margin-top: 15px;
+}
+
+.Showcase-Add-Snippet-Button:hover {
+    background: #242423;
+    color: #FFFFFF;
+}
+
+/* Container */
+
+.Container {
+    width: 85%;
+    margin: auto;
+    background: #FFFFFF;
+    padding: 15px;
+    padding-bottom: 0px;
+}
+
+/* Code Snippets */
+
+.Code-Snippets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.Snippet {
+    margin: 10px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+    max-width: 350px;
+    position: relative;
+    padding-bottom: 30px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.Snippet:hover {
+    transform: scale(1.025);
+}
+
+.Title-Space {
+    padding: 10px;
+    background: #E8EDDF;
+    font-family: var(--primary);
+    font-size: 17px;
+}
+
+.Snippet-Details {
+    padding: 10px;
+}
+
+.Snippet-Detail {
+    font-family: var(--primary);
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.Snippet-Detail span {
+    font-weight: 400;
+}
+
+.Circles {
+    display: flex;
+    justify-content: space-between;
+    width: 75px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.Circles div {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.Circles div:nth-child(1) {
+    background: #FF5F54;
+}
+
+.Circles div:nth-child(2) {
+    background: #FDBE2A;
+}
+
+.Circles div:nth-child(3) {
+    background: #28C940;
+}
+
+.Code-Snippet-View {
+    z-index: 1000;
+    display: flex;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100%;
+    padding: 25px;
+    background-color: #242423;
+}
+
+.Snippet-Details-View {
+    display: flex;
+    flex-direction: column;
+    flex: 40%;
+    padding: 25px;
+    background-color: #FFFFFF;
+}
+
+.Snippet-Details-View p {
+    font-family: "Hack";
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#Code-Snippet-View-Description {
+    margin-top: 10px;
+    overflow: auto;
+}
+
+#Buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #242423;
+    margin-bottom: 25px;
+}
+
+#Change-Theme-Button, #Close-Snippet-Button {
+    padding: 10px;
+    font-family: "Hack";
+    font-size: 14px;
+    background-color: #242423;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+#Change-Theme-Button:hover {
+    background-color: #FF9E08;
+}
+
+#Close-Snippet-Button:hover {
+    background-color: #FF0000;
+}
+
+.Snippet-Details-View p span {
+    font-weight: 400;
+}
+
+.Code-Snippet-View-Code {
+    flex: 60%;
+    overflow: auto;
+}
+
+code {
+    padding: 10px 25px !important;
+    font-family: "Hack";
+    font-size: 14px;
+    max-height: 100%;
+    overflow: auto;
+    height: 100;
+}
+
+.Close-Snippet {
+    display: none;
+}
+
+@media (max-width: 850px) {
+    .Code-Snippet-View {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .Snippet-Details-View {
+        max-height: 40%;
+    }
+
+    .Code-Snippet-View-Code {
+        max-height: 60%;
+    }
+}
