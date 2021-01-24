@@ -1,10 +1,8 @@
 var addSnippetForm = document.querySelector(".Add-Snippet-Form");
 var arrowButton = document.querySelector(".Arrow");
 var addSnippetButton = document.querySelector(".Showcase-Add-Snippet-Button");
-var searchQuery = document.querySelector(".Search-Query");
 var codeSnippets = document.querySelector(".Code-Snippets");
 var showcaseDetails = document.querySelector(".Showcase-Details");
-var closeSnippetButton = document.querySelector("#Close-Snippet-Button");
 var codeSnippetView = document.querySelector(".Code-Snippet-View");
 var themes = document.querySelectorAll(".Theme");
 
@@ -36,10 +34,6 @@ if (localStorage.getItem("code snippets") == null) {
 arrowButton.addEventListener("click", function () {
     addSnippetForm.classList.toggle("Hide");
     arrowButton.classList.toggle("Turn");
-});
-
-searchQuery.addEventListener("keyup", function() {
-    console.log(searchQuery.value);
 });
 
 addSnippetButton.addEventListener("click", function (event) {
@@ -83,24 +77,43 @@ addSnippetButton.addEventListener("click", function (event) {
 });
 
 var snippets = document.querySelectorAll(".Snippet");
-var themeChangeButton = document.querySelector("#Change-Theme-Button");
-
-themeChangeButton.addEventListener("click", function() {
-    if (themes[0].disabled) {
-        themes[0].disabled = false;
-        themes[1].disabled = true;    
-    } else if (themes[1].disabled) {
-        themes[0].disabled = true;
-        themes[1].disabled = false;
-    }
-});
 
 for (var i = 0 ; i < snippets.length ; i++) {
     snippets[i].addEventListener("click", function () {
         codeSnippetView.classList.toggle("Close-Snippet");    
+        var snippets = JSON.parse(localStorage.getItem("code snippets"));
+
+        for (var snippet in snippets) {
+            console.log(snippets[snippet]["title"]);
+            if (snippets[snippet]["title"] == this.children[0].children[0].textContent) {
+                console.log(snippets[snippet]["title"]);
+                var HTML = `<div class="Snippet-Details-View"><div id="Buttons"><button id="Change-Theme-Button">Change Theme</button><button id="Close-Snippet-Button">Close</button></div><p>Title - <span>${snippets[snippet]["title"]}</span></p><p>Language - <span>${snippets[snippet]["language"]}</span></p><p id="Code-Snippet-View-Description">Description - <span>${snippets[snippet]["description"]}</span></p></div><div class="Code-Snippet-View-Code"><pre><code>${snippets[snippet]["code"]}</code></pre></div>`;
+                codeSnippetView.innerHTML = HTML;
+                
+                document.querySelector("#Change-Theme-Button").addEventListener("click", function() {
+                    if (themes[0].disabled) {
+                        themes[0].disabled = false;
+                        themes[1].disabled = true;    
+                        console.log(0);
+                    } else if (themes[1].disabled) {
+                        themes[0].disabled = true;
+                        themes[1].disabled = false;
+                        console.log(1);
+                    }
+                });
+                
+                var closeSnippetButton = document.querySelector("#Close-Snippet-Button");
+
+                closeSnippetButton.addEventListener("click", function () {
+                    codeSnippetView.classList.toggle("Close-Snippet");
+                });
+
+                document.querySelectorAll("pre code").forEach((block) => {
+                    hljs.highlightBlock(block);
+                });
+
+                break;
+            }
+        }
     });
 }
-
-closeSnippetButton.addEventListener("click", function () {
-    codeSnippetView.classList.toggle("Close-Snippet");
-});

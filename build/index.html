@@ -15,7 +15,6 @@
     <div class="Header">
         <div class="Header-Container">
             <p class="Header-Title">Code Snippets Manager</p>
-            <input type="text" class="Search-Query" placeholder="Search for code snippets">
         </div>
     </div>
     <div class="Header-Margin"></div>
@@ -35,97 +34,7 @@
         </div>
         <div class="Code-Snippets"></div>
     </div>
-    <div class="Code-Snippet-View Close Close-Snippet">
-        <div class="Snippet-Details-View ">
-            <div id="Buttons">
-                <button id="Change-Theme-Button">Change Theme</button>
-                <button id="Close-Snippet-Button">Close</button>
-            </div>
-            <p>Title - <span>Calculator</span></p>
-            <p>Language - <span>Python</span></p>
-            <p id="Code-Snippet-View-Description">Description - <span>This program is a basic calculator capable of doing addition, subtraction, multiplication, and division. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore molestias quo fuga assumenda, facere quas impedit iusto vitae, optio libero harum odio animi mollitia magnam repellendus necessitatibus, cumque ipsa perferendis quia. Placeat, eveniet! Atque perspiciatis quod necessitatibus nesciunt nemo aperiam, id corrupti ipsam magnam quia. Quam voluptate ipsa natus, cumque ducimus impedit mollitia corporis molestias qui quos quas debitis ullam. Nihil, iusto. Doloremque velit itaque quas, adipisci nostrum architecto eius iure consequuntur, ab error voluptas commodi incidunt doloribus nihil autem aspernatur asperiores molestiae voluptatem fugit quia, iste aliquid. Praesentium maiores fugit molestias suscipit neque corrupti, consequuntur dolorem! Officiis magni ipsam fuga officia mollitia cum nam, neque sed? Eveniet ut ducimus, harum tempora ullam rerum dolore porro. Veniam suscipit temporibus tempore rem saepe, fugiat est reprehenderit minima repellendus excepturi libero quo quam earum obcaecati ad nulla maiores enim similique voluptatum odio dicta corporis soluta. Sunt unde necessitatibus non minus quae maiores cupiditate, dolores culpa nihil magnam repellendus, sed quis officia corporis. Doloremque quam eum corrupti, ea neque iusto quas non ullam enim! Fuga, aspernatur reprehenderit quia amet unde odio sint earum repudiandae cum magni expedita natus exercitationem vel illum similique cumque quas voluptatibus ad voluptatem blanditiis laboriosam saepe, dolores necessitatibus inventore. Aspernatur eaque magnam excepturi fuga debitis, explicabo sequi numquam sunt tempora dicta alias aut ipsa reiciendis eligendi nostrum ea ullam. Explicabo, placeat quaerat odio omnis tenetur aliquid, itaque aliquam non quam ipsam magnam totam. Dolorem nulla quibusdam veritatis corrupti tenetur, voluptate similique veniam blanditiis aspernatur maiores, hic quos accusamus nam voluptates, dicta eum. Repellat soluta exercitationem, adipisci tempore architecto rem minus dolorem similique voluptatum, quod voluptate minima? Minima deleniti sit iure eveniet architecto, sapiente nulla deserunt similique eos. Laboriosam, nisi quasi dolorum officiis nobis neque quod cumque obcaecati id expedita dolorem nostrum iure soluta laudantium facilis, delectus fugit! Consequatur fugit earum maiores fuga ab praesentium cumque repudiandae? Nemo officia quam voluptatem exercitationem, est totam officiis unde modi repellat excepturi esse quisquam delectus vero dignissimos iusto perspiciatis odio ducimus a eaque. Autem reiciendis perferendis dicta, adipisci voluptatum accusantium rerum ut voluptatem illum fugiat sint pariatur ipsum veniam officia. Maxime magnam nemo expedita iure animi, velit voluptate voluptatibus. Numquam tempore, a reiciendis autem, quos consequuntur quas aliquam quod cupiditate ducimus beatae temporibus. Rerum error illum autem magnam omnis placeat, ipsa tempore voluptatem sit dolorem, reprehenderit eos exercitationem vero ab recusandae atque neque et. Eveniet eum asperiores excepturi minus similique quaerat labore delectus?</span></p>
-        </div>
-        <div class="Code-Snippet-View-Code"><pre><code>
-# Program make a simple calculator
-
-# This function adds two numbers
-def add(x, y):
-    return x + y
-
-# This function subtracts two numbers
-def subtract(x, y):
-    return x - y
-
-# This function multiplies two numbers
-def multiply(x, y):
-    return x * y
-
-# This function divides two numbers
-def divide(x, y):
-    return x / y
-
-
-print("Select operation.")
-print("1.Add")
-print("2.Subtract")
-print("3.Multiply")
-print("4.Divide")
-
-while True:
-    # Take input from the user
-    choice = input("Enter choice(1/2/3/4): ")
-
-    # Check if choice is one of the four options
-    if choice in ('1', '2', '3', '4'):
-        num1 = float(input("Enter first number: "))
-        num2 = float(input("Enter second number: "))
-
-        if choice == '1':
-            print(num1, "+", num2, "=", add(num1, num2))
-
-        elif choice == '2':
-            print(num1, "-", num2, "=", subtract(num1, num2))
-
-        elif choice == '3':
-            print(num1, "*", num2, "=", multiply(num1, num2))
-
-        elif choice == '4':
-            print(num1, "/", num2, "=", divide(num1, num2))
-        break
-    else:
-        print("Invalid Input")
-
-print("Select operation.")
-print("1.Add")
-print("2.Subtract")
-print("3.Multiply")
-print("4.Divide")
-
-while True:
-    # Take input from the user
-    choice = input("Enter choice(1/2/3/4): ")
-
-    # Check if choice is one of the four options
-    if choice in ('1', '2', '3', '4'):
-        num1 = float(input("Enter first number: "))
-        num2 = float(input("Enter second number: "))
-
-        if choice == '1':
-            print(num1, "+", num2, "=", add(num1, num2))
-
-        elif choice == '2':
-            print(num1, "-", num2, "=", subtract(num1, num2))
-
-        elif choice == '3':
-            print(num1, "*", num2, "=", multiply(num1, num2))
-
-        elif choice == '4':
-            print(num1, "/", num2, "=", divide(num1, num2))
-        break
-    else:
-        print("Invalid Input")
-        </code></pre></div>
-    </div>
+    <div class="Code-Snippet-View Close Close-Snippet"></div>
     <script src="./main.js"></script>
 </body>
 </html>
