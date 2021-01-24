@@ -1,3 +1,0 @@
-Search functionality - title, language, description
-view snippet
-delete all snippets - reset
